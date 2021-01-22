@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Strapi无头CMS，快速构建API | 足生
+    </title>
+    <meta name="description" content="A VitePress site">
+    <link rel="stylesheet" href="/_assets/style.7a6ec506.css">
+    <link rel="modulepreload" href="/_assets/common-d6bd45c0.js">
+    <link rel="modulepreload" href="/_assets/docs_frontend_strapi.md.054cf9b1.lean.js">
+    <link rel="modulepreload" href="/_assets/app.f0656739.js">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="足生的个人博客">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="no-sidebar theme"><header class="navbar"><!--[--><a class="title" aria-label="足生, back to home" href="/"><!----><span>足生</span></a><div class="flex-grow"></div><nav class="nav-links hide-mobile"><!--[--><!--[--><div class="nav-item"><a class="nav-link" href="/" target="" rel="">首页 <!----></a></div><!--]--><!--[--><div class="nav-item"><a class="nav-link" href="/docs" target="" rel="">归档 <!----></a></div><!--]--><!--[--><div class="nav-item"><a class="nav-link" href="/tags" target="" rel="">分类 <!----></a></div><!--]--><!--]--><!----><!----></nav><!--[--><!--[--><!--]--><!--]--><!--]--><div class="sidebar-button"><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div></header><aside class=""><!--[--><nav class="nav-links show-mobile"><!--[--><!--[--><div class="nav-item"><a class="nav-link" href="/" target="" rel="">首页 <!----></a></div><!--]--><!--[--><div class="nav-item"><a class="nav-link" href="/docs" target="" rel="">归档 <!----></a></div><!--]--><!--[--><div class="nav-item"><a class="nav-link" href="/tags" target="" rel="">分类 <!----></a></div><!--]--><!--]--><!----><!----></nav><!--[--><!--[--><!--]--><!--]--><ul class="sidebar"><!--[--><!--]--></ul><!--[--><!--[--><!--]--><!--]--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main><div class="content"><!--[--><!--[--><!--]--><!--]--><div class="md-header"><div class="md-title">Strapi无头CMS，快速构建API</div><span id="jinrishici-sentence">正在加载今日诗词....</span><div class="md-date">2020-12-04</div></div><ul class="catalog"><!--[--><li class="catalog-item"><a class="level level-2" href="#strapi-介绍">Strapi 介绍</a><!----></li><li class="catalog-item"><a class="level level-2" href="#安装">安装</a><!----></li><li class="catalog-item"><a class="level level-2" href="#使用">使用</a><!----></li><li class="catalog-item"><a class="level level-2" href="#定制富文本编辑器">定制富文本编辑器</a><!----></li><li class="catalog-item"><!----><a class="level level-3" href="#_1-生成插件并安装依赖">1. 生成插件并安装依赖</a></li><li class="catalog-item"><!----><a class="level level-3" href="#_2-创建-medialib">2.创建 MediaLib</a></li><li class="catalog-item"><!----><a class="level level-3" href="#_3-创建-wysiwyg">3.创建 WYSIWYG</a></li><li class="catalog-item"><!----><a class="level level-3" href="#_4-创建-ckeditor">4.创建 CKEditor</a></li><li class="catalog-item"><!----><a class="level level-3" href="#_5-覆盖-wysiwyg-修改插件前端入口">5.覆盖 WYSIWYG,修改插件前端入口</a></li><li class="catalog-item"><!----><a class="level level-3" href="#_6-替换自己定制的-ckeditor5">6. 替换自己定制的 CKEditor5</a></li><li class="catalog-item"><a class="level level-2" href="#参考">参考</a><!----></li><!--]--></ul><div><h2 id="strapi-介绍"><a class="header-anchor" href="#strapi-介绍" aria-hidden="true">#</a> Strapi 介绍</h2><p><a href="https://github.com/strapi/strapi" target="_blank" rel="noopener noreferrer">Strapi</a>是一个免费的开源无头 CMS，可以快速构建自己所需的 API。</p><ul><li><strong>保持对数据的控制</strong>。使用 Strapi，可以知道数据的存储位置，并且始终可以完全控制。</li><li><strong>自托管</strong>。可以按照自己的方式托管和扩展 Strapi 项目。可以选择所需的任何托管平台：AWS，Netlify，Heroku，VPS 或专用服务器。您可以随增长而扩展，100％独立。</li><li><strong>可以选择自己喜欢的数据库</strong>。Strapi 适用于 SQL 和 NoSQL 数据库：MongoDB，PostgreSQL，MySQL，MariaDB 和 SQLite。</li><li><strong>可定制的</strong>。通过完全自定义 API，路由或插件来完全满足需求，从而快速构建逻辑。</li></ul><h2 id="安装"><a class="header-anchor" href="#安装" aria-hidden="true">#</a> 安装</h2><div class="language-bash"><pre><code><span class="token comment"># 使用 yarn 安装</span>
+<span class="token function">yarn</span> create strapi-app my-project --quickstart
+<span class="token comment"># 使用  npm/npx 或者 安装</span>
+npx create-strapi-app my-project --quickstart
+<span class="token comment"># 启动开发模式</span>
+<span class="token function">yarn</span> dev
+<span class="token comment"># 生产模式</span>
+<span class="token function">yarn</span> start
+<span class="token comment"># 重新构建</span>
+<span class="token function">yarn</span> build
+</code></pre></div><p>可以打开<code>config/server.js</code>文件,修改启动端口号</p><p>初次安装完会弹出一个页面,让你注册管理员账号 <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dcb7dc1acf5b433f82705e0215d303ce~tplv-k3u1fbpfcp-watermark.image" alt=""></p><h2 id="使用"><a class="header-anchor" href="#使用" aria-hidden="true">#</a> 使用</h2><p>在登录成功后</p><ol><li><p>点击左侧菜单栏的<strong>内容类型生成器</strong></p></li><li><p>点击创建一个新的<strong>Content Type</strong></p></li><li><p>输入名称,在高级设置里,将<strong>Draft/publish system</strong>选择<strong>OFF</strong>(取消每次发布文章为草稿)点击继续(这里的名称就是后面 api 路径名,即 api/name )</p></li><li><p>选择自己所需的字段并创建,最后点击完成,应用重启.</p></li><li><p>在左侧菜单栏<strong>COLLECTION TYPES</strong>分类下,就会出现刚刚创建的内容 <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d1608bdda3cd46038681bdf60051e797~tplv-k3u1fbpfcp-watermark.image" alt=""></p></li><li><p>点击新建,输入内容后保存.(倘若第三步没有选择<strong>OFF</strong>,还要点击保存旁边的<strong>Publish</strong>).此时访问<code>http://localhost:1337/tests</code>显示<strong>statusCode: 403</strong>.</p></li><li><p>点击左侧菜单栏的<strong>设置/角色与权限/Public</strong>,勾选<strong>find</strong>和<strong>find one</strong>,保存.</p></li><li><p>此时访问<code>http://localhost:1337/tests</code>便可显示数据内容</p></li></ol><p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/59cc3ae342a147bf85ad0a61c4c858bf~tplv-k3u1fbpfcp-watermark.image" alt=""></p><h2 id="定制富文本编辑器"><a class="header-anchor" href="#定制富文本编辑器" aria-hidden="true">#</a> 定制富文本编辑器</h2><p>这里以<strong>CKEditor5</strong>为例,其定制教程查看<a href="https://juejin.cn/post/6902279323818917902" target="_blank" rel="noopener noreferrer">「CKEditor5」富文本编辑器定制</a>,定制完成后复制<code>build</code>文件夹下的<code>ckeditor.js</code>和<code>translations</code>文件夹.</p><h3 id="_1-生成插件并安装依赖"><a class="header-anchor" href="#_1-生成插件并安装依赖" aria-hidden="true">#</a> 1. 生成插件并安装依赖</h3><div class="language-bash"><pre><code><span class="token function">yarn</span> strapi generate:plugin wysiwyg
+<span class="token builtin class-name">cd</span> plugins/wysiwyg
+<span class="token function">yarn</span> <span class="token function">add</span> @ckeditor/ckeditor5-react @ckeditor/ckeditor5-build-classic
+</code></pre></div><h3 id="_2-创建-medialib"><a class="header-anchor" href="#_2-创建-medialib" aria-hidden="true">#</a> 2.创建 MediaLib</h3><p><strong>Path</strong> — <code>./plugins/wysiwyg/admin/src/components/MediaLib/index.js</code></p><div class="language-js"><pre><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useStrapi<span class="token punctuation">,</span> prefixFileUrlWithBackendUrl <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;strapi-helper-plugin&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">&quot;prop-types&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">MediaLib</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> isOpen<span class="token punctuation">,</span> onChange<span class="token punctuation">,</span> onToggle <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>
+    strapi<span class="token operator">:</span> <span class="token punctuation">{</span>
+      componentApi<span class="token operator">:</span> <span class="token punctuation">{</span> getComponent <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useStrapi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>data<span class="token punctuation">,</span> setData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>isDisplayed<span class="token punctuation">,</span> setIsDisplayed<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isOpen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setIsDisplayed</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>isOpen<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> Component <span class="token operator">=</span> <span class="token function">getComponent</span><span class="token punctuation">(</span><span class="token string">&quot;media-library&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Component<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleInputChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> url <span class="token punctuation">}</span> <span class="token operator">=</span> data<span class="token punctuation">;</span>
+
+      <span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>data<span class="token punctuation">,</span> url<span class="token operator">:</span> <span class="token function">prefixFileUrlWithBackendUrl</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleClosed</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">onChange</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">setData</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setIsDisplayed</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Component <span class="token operator">&amp;&amp;</span> isDisplayed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Component
+        allowedTypes<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token string">&quot;images&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;videos&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;files&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+        isOpen<span class="token operator">=</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">}</span>
+        multiple<span class="token operator">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span>
+        noNavigation
+        onClosed<span class="token operator">=</span><span class="token punctuation">{</span>handleClosed<span class="token punctuation">}</span>
+        onInputMediaChange<span class="token operator">=</span><span class="token punctuation">{</span>handleInputChange<span class="token punctuation">}</span>
+        onToggle<span class="token operator">=</span><span class="token punctuation">{</span>onToggle<span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+MediaLib<span class="token punctuation">.</span>defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span>
+  isOpen<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onToggle</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+MediaLib<span class="token punctuation">.</span>propTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  isOpen<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>bool<span class="token punctuation">,</span>
+  onChange<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">,</span>
+  onToggle<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MediaLib<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-创建-wysiwyg"><a class="header-anchor" href="#_3-创建-wysiwyg" aria-hidden="true">#</a> 3.创建 WYSIWYG</h3><p><strong>Path</strong> — <code>./plugins/wysiwyg/admin/src/components/Wysiwyg/index.js</code></p><div class="language-js"><pre><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">&quot;prop-types&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> isEmpty <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;lodash&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@buffetjs/core&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Label<span class="token punctuation">,</span> InputDescription<span class="token punctuation">,</span> InputErrors <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;strapi-helper-plugin&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Editor <span class="token keyword">from</span> <span class="token string">&quot;../CKEditor&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> MediaLib <span class="token keyword">from</span> <span class="token string">&quot;../MediaLib&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Wysiwyg</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>
+  inputDescription<span class="token punctuation">,</span>
+  errors<span class="token punctuation">,</span>
+  label<span class="token punctuation">,</span>
+  name<span class="token punctuation">,</span>
+  noErrorsDescription<span class="token punctuation">,</span>
+  onChange<span class="token punctuation">,</span>
+  value<span class="token punctuation">,</span>
+<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>isOpen<span class="token punctuation">,</span> setIsOpen<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> spacer <span class="token operator">=</span> <span class="token operator">!</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>inputDescription<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> height<span class="token operator">:</span> <span class="token string">&quot;.4rem&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div <span class="token operator">/</span><span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>noErrorsDescription <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>errors<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    spacer <span class="token operator">=</span> <span class="token operator">&lt;</span>div <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>mime<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">&quot;image&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> imgTag <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;p&gt;&lt;img src=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token punctuation">.</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; caption=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token punctuation">.</span>caption<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; alt=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token punctuation">.</span>alternativeText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;&gt;&lt;/img&gt;&lt;/p&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> newValue <span class="token operator">=</span> value <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>imgTag<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> imgTag<span class="token punctuation">;</span>
+
+      <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> value<span class="token operator">:</span> newValue <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Handle videos and other type of files by adding some code</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleToggle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setIsOpen</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prev</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>prev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div
+      style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        marginBottom<span class="token operator">:</span> <span class="token string">&quot;1.6rem&quot;</span><span class="token punctuation">,</span>
+        fontSize<span class="token operator">:</span> <span class="token string">&quot;1.3rem&quot;</span><span class="token punctuation">,</span>
+        fontFamily<span class="token operator">:</span> <span class="token string">&quot;Lato&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Label htmlFor<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span> message<span class="token operator">=</span><span class="token punctuation">{</span>label<span class="token punctuation">}</span> style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginBottom<span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Button color<span class="token operator">=</span><span class="token string">&quot;primary&quot;</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span>handleToggle<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          MediaLib
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Editor name<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span> onChange<span class="token operator">=</span><span class="token punctuation">{</span>onChange<span class="token punctuation">}</span> value<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>InputDescription
+        message<span class="token operator">=</span><span class="token punctuation">{</span>inputDescription<span class="token punctuation">}</span>
+        style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">!</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>inputDescription<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">{</span> marginTop<span class="token operator">:</span> <span class="token string">&quot;1.4rem&quot;</span> <span class="token punctuation">}</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>InputErrors
+        errors<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token operator">!</span>noErrorsDescription <span class="token operator">&amp;&amp;</span> errors<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+        name<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>spacer<span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span>MediaLib
+        onToggle<span class="token operator">=</span><span class="token punctuation">{</span>handleToggle<span class="token punctuation">}</span>
+        isOpen<span class="token operator">=</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">}</span>
+        onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Wysiwyg<span class="token punctuation">.</span>defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span>
+  errors<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  inputDescription<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  label<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  noErrorsDescription<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  value<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Wysiwyg<span class="token punctuation">.</span>propTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  errors<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>array<span class="token punctuation">,</span>
+  inputDescription<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span><span class="token function">oneOfType</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+    PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">,</span>
+    PropTypes<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      id<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+      params<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>object<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  label<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span><span class="token function">oneOfType</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+    PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">,</span>
+    PropTypes<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      id<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+      params<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>object<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+  noErrorsDescription<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>bool<span class="token punctuation">,</span>
+  onChange<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+  value<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Wysiwyg<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_4-创建-ckeditor"><a class="header-anchor" href="#_4-创建-ckeditor" aria-hidden="true">#</a> 4.创建 CKEditor</h3><p><strong>Path</strong> — <code>./plugins/wysiwyg/admin/src/components/CKEditor/index.js</code></p><div class="language-js"><pre><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">&quot;prop-types&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CKEditor <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@ckeditor/ckeditor5-react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ClassicEditor <span class="token keyword">from</span> <span class="token string">&quot;@ckeditor/ckeditor5-build-classic&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> styled <span class="token keyword">from</span> <span class="token string">&quot;styled-components&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Wrapper <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  .ck-editor__main {
+    min-height: 200px;
+    &gt; div {
+      min-height: 200px;
+    }
+  }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> configuration <span class="token operator">=</span> <span class="token punctuation">{</span>
+  toolbar<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;heading&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;|&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;bold&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;italic&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;link&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;bulletedList&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;numberedList&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;|&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;indent&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;outdent&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;|&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;blockQuote&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;insertTable&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;mediaEmbed&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;undo&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;redo&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Editor</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> onChange<span class="token punctuation">,</span> name<span class="token punctuation">,</span> value <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Wrapper<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>CKEditor
+        editor<span class="token operator">=</span><span class="token punctuation">{</span>ClassicEditor<span class="token punctuation">}</span>
+        config<span class="token operator">=</span><span class="token punctuation">{</span>configuration<span class="token punctuation">}</span>
+        data<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span>
+        onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> editor</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> data <span class="token operator">=</span> editor<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token punctuation">{</span> target<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> value<span class="token operator">:</span> data <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Wrapper<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Editor<span class="token punctuation">.</span>propTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  onChange<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+  name<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+  value<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>string<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Editor<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_5-覆盖-wysiwyg-修改插件前端入口"><a class="header-anchor" href="#_5-覆盖-wysiwyg-修改插件前端入口" aria-hidden="true">#</a> 5.覆盖 WYSIWYG,修改插件前端入口</h3><p>替换下面文件的内容</p><p><strong>Path</strong> — <code>./plugins/wysiwyg/admin/src/index.js</code></p><div class="language-js"><pre><code><span class="token keyword">import</span> pluginPkg <span class="token keyword">from</span> <span class="token string">&quot;../../package.json&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Wysiwyg <span class="token keyword">from</span> <span class="token string">&quot;./components/Wysiwyg&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> pluginId <span class="token keyword">from</span> <span class="token string">&quot;./pluginId&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter">strapi</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> pluginDescription <span class="token operator">=</span>
+    pluginPkg<span class="token punctuation">.</span>strapi<span class="token punctuation">.</span>description <span class="token operator">||</span> pluginPkg<span class="token punctuation">.</span>description<span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> plugin <span class="token operator">=</span> <span class="token punctuation">{</span>
+    blockerComponent<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    blockerComponentProps<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    description<span class="token operator">:</span> pluginDescription<span class="token punctuation">,</span>
+    icon<span class="token operator">:</span> pluginPkg<span class="token punctuation">.</span>strapi<span class="token punctuation">.</span>icon<span class="token punctuation">,</span>
+    id<span class="token operator">:</span> pluginId<span class="token punctuation">,</span>
+    <span class="token function-variable function">initializer</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    injectedComponents<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    isReady<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    isRequired<span class="token operator">:</span> pluginPkg<span class="token punctuation">.</span>strapi<span class="token punctuation">.</span>required <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    mainComponent<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> pluginPkg<span class="token punctuation">.</span>strapi<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+    preventComponentRendering<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    settings<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    trads<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  strapi<span class="token punctuation">.</span><span class="token function">registerField</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">&quot;wysiwyg&quot;</span><span class="token punctuation">,</span> Component<span class="token operator">:</span> Wysiwyg <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> strapi<span class="token punctuation">.</span><span class="token function">registerPlugin</span><span class="token punctuation">(</span>plugin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_6-替换自己定制的-ckeditor5"><a class="header-anchor" href="#_6-替换自己定制的-ckeditor5" aria-hidden="true">#</a> 6. 替换自己定制的 CKEditor5</h3><ol><li>将开始复制的<code>ckeditor.js</code>和<code>translations</code>文件夹拷贝到<code>plugins/wysiwyg/admin/src/components/CKEditor</code>文件夹下</li><li>修改<code>plugins/wysiwyg/admin/src/components/CKEditor/index.js</code><div class="language-diff"><pre><code><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> import ClassicEditor from &#39;@ckeditor/ckeditor5-build-classic&#39;;
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> import ClassicEditor from &quot;./ckeditor&quot;;
+</span></span></code></pre></div></li><li>重新构建文件,查看效果</li></ol><div class="language-bash"><pre><code><span class="token function">yarn</span> build
+<span class="token function">yarn</span> dev
+</code></pre></div><h2 id="参考"><a class="header-anchor" href="#参考" aria-hidden="true">#</a> 参考</h2><ul><li><a href="https://strapi.io/documentation/v3.x/guides/registering-a-field-in-admin.html#introduction" target="_blank" rel="noopener noreferrer">创建一个新插件来在 CKEditor 中更改所见即所得</a></li><li><a href="https://github.com/gtomato/ckeditor5-strapi-upload-plugin" target="_blank" rel="noopener noreferrer">ckeditor5-strapi-upload-plugin</a></li></ul></div><div class="links-wrapper"><div class="prev-link"><!----></div><div class="next-link"><!----></div></div><footer class="page-edit"><!----></footer><!--[--><!--[--><!--]--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"README.md\":\"dd24c787\",\"docs.md\":\"2b1bb28e\",\"index.md\":\"ddc3854e\",\"tags.md\":\"5351b508\",\"docs_mac.md\":\"0897cb43\",\"docs_book_RichDadPoorDad.md\":\"31a3482f\",\"docs_book_homeBook.md\":\"a2850070\",\"docs_book_ldj.md\":\"748d51be\",\"docs_book_lifeFairy.md\":\"fa1e9ea9\",\"docs_book_sixLife.md\":\"45bd35fa\",\"docs_book_tlbb.md\":\"46ade3c9\",\"docs_financing_base.md\":\"67664a21\",\"docs_frontend_Ckeditor5.md\":\"ea825be0\",\"docs_frontend_strapi.md\":\"054cf9b1\",\"docs_jotting_talkLove.md\":\"174bd2df\"}")</script>
+    <script type="module" async src="/_assets/app.f0656739.js"></script>
+  </body>
+</html>

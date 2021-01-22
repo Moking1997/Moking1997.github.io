@@ -1,0 +1,1 @@
+import{g as t,f as o,E as u}from"./common-d6bd45c0.js";const p='{"title":"天龙八部","frontmatter":{"date":"2020-12-01","title":"天龙八部","tags":["随笔","读书感"],"describe":"天龙八部"},"relativePath":"docs/book/tlbb.md","lastUpdated":1611324979669.899}';var e={};const q=u("",9);e.render=function(u,p,e,d,r,a){return o(),t("div",null,[q])};export default e;export{p as __pageData};
